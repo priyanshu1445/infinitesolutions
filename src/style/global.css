@@ -1,0 +1,243 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+
+*{
+      font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  /* font-weight: <weight>;/ */
+  font-style: normal;
+}
+
+
+.div-box
+{
+    padding: 50px !important;
+}
+
+/* For tablets (screen width <= 768px) */
+@media (max-width: 768px) {
+  .div-box {
+    padding: 30px !important;
+  }
+}
+
+/* For mobile phones (screen width <= 576px) */
+@media (max-width: 576px) {
+  .div-box {
+    padding: 20px !important;
+  }
+}
+
+.hero-background {
+    background-color: #1B3C53;
+}
+.gradient-text {
+  background: linear-gradient(90deg, #ff6a00, #ee0979);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.download-app-section {
+  background-image:linear-gradient(rgba(0,0,0,0.6                           ),rgba(0,0,0,0.6)),url('../assets/pexels-designecologist-1779487.jpg'); /* Replace with your actual image */
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  min-height: 400px;
+  position: relative;
+}
+.custom-navbar {
+  background-color: rgba(27, 60, 83, 0.8) !important; /* 80% opacity of #1B3C53 */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); /* For Safari */
+  transition: background-color 0.3s ease;
+  z-index: 1030;
+  
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Optional subtle border */
+}
+
+.custom-navbar .nav-link {
+  font-weight: 500;
+  color: #fff;
+}
+
+.custom-navbar .nav-link:hover {
+  color: #0d6efd;
+}
+
+/* 
+
+
+.service-card {
+  transition: all 0.3s ease;
+box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+
+  border: 1px solid #eee;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.5rem 1.2rem rgba(0, 0, 0, 0.1);
+  border-color: transparent;
+}
+
+/* Icon Circle */
+.icon-circle {
+  width: 80px;
+  height: 80px;
+  background: #f0f4ff;
+  border-radius: 50%;
+  /* transition: background 0.3s; */
+}
+
+.service-card:hover .icon-circle {
+  background: #e2ddff;
+}
+
+
+
+[data-aos] {
+  transition: all 0.6s ease-in-out;
+}
+
+
+.hover-card {
+  position: relative;
+  height: 350px;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.hover-overlay {
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.hover-card:hover .hover-overlay {
+  opacity: 1;
+}
+
+.hover-card img {
+  transition: transform 0.4s ease;
+}
+
+.hover-card:hover img {
+  transform: scale(1.05);
+  filter: blur(2px) brightness(0.7);
+}
+.text-gradient {
+  background: linear-gradient(90deg, #4f46e5, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.quote-card {
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+}
+
+
+
+/*  parallax  */
+
+
+
+.parallax {
+    width: 100%;
+    height: 50vh;
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../assets/hero2.jpg);
+    background-position: center;
+    background-size: cover;
+   background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+
+
+/* Optional rounded hover or transition */
+section .shadow-sm:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  transform: translateY(-4px);
+  transition: 0.3s ease;
+}
+.horizontal-line {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  right: 10%;
+  height: 5px;
+  background: repeating-linear-gradient(
+    to right,
+    #ccc,
+    #ccc 10px,
+    transparent 10px,
+    transparent 20px
+  );
+  z-index: 0;
+}
+
+
+.text-gradient {
+  background: linear-gradient(90deg, #4f46e5, #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.choose-card {
+  background: #fff;
+  transition: all 0.3s ease;
+  border: 1px solid #e5e7eb;
+}
+
+.choose-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(79, 70, 229, 0.1);
+  /* border-color: ; */
+}
+
+/* Trusted Brands styling */
+.brand-logo {
+  max-height: 100px;
+  width: 150px;
+  transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
+  filter: grayscale(100%);
+  opacity: 0.7;
+}
+
+.brand-logo:hover {
+  transform: scale(1.1);
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+/* Optional text gradient class */
+.text-gradient {
+  background: linear-gradient(90deg, #4f46e5, #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/*  testimonial section  */
+
+.testimonial-card {
+  transition: transform 0.3s ease;
+}
+.testimonial-card:hover {
+  transform: translateY(-5px);
+}
+
+
+.testimonial {
+    width: 100%;
+    height: 80vh;
+
+    background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url('../assets//hero1.jpg');
+    background-size: cover;
+    background-attachment: fixed
+    ;
+}
