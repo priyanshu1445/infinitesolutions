@@ -256,7 +256,7 @@ const HomePage = () => {
   return (
     <div>
       <section className="hero-section hero-background  div-box">
-      <Container>
+      <Container className='mt-5'>
         <Row className="align-items-center g-5">
           {/* Hero Text */}
           <Col lg={7} data-aos="fade-right">
