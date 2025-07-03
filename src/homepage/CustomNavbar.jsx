@@ -1,6 +1,6 @@
 import { Navbar, Nav, Container, Button } from 'react-bootstrap';
 import { Download, HelpCircle } from 'lucide-react'; // Lucide icons
-import logo from '../assets/apple.png';
+import logo from '../assets/logo-removebg-preview.png';
 import '../style/global.css';
 
 const CustomNavbar = () => {
