@@ -1,15 +1,14 @@
 import { Navbar, Nav, Container, Button } from 'react-bootstrap';
-import logo from '../assets/apple.png'; // Replace with your actual logo path
-import '../style/global.css'; // Optional CSS for bl
-
-
+import { Download, HelpCircle } from 'lucide-react'; // Lucide icons
+import logo from '../assets/apple.png';
+import '../style/global.css';
 
 const CustomNavbar = () => {
   return (
     <Navbar
       expand="lg"
       fixed="top"
-      className="custom-navbar backdrop-blur  bg-opacity-75 shadow-sm"
+      className="custom-navbar backdrop-blur bg-opacity-75 shadow-sm"
     >
       <Container>
         {/* Left: Logo */}
@@ -21,17 +20,22 @@ const CustomNavbar = () => {
 
         <Navbar.Collapse id="basic-navbar-nav">
           {/* Center: Nav Links */}
-          <Nav className="mx-auto gap-4">
+          <Nav className="mx-auto gap-2">
             <Nav.Link href="#home">Home</Nav.Link>
             <Nav.Link href="#services">Services</Nav.Link>
             <Nav.Link href="#testimonials">Testimonials</Nav.Link>
             <Nav.Link href="#contact">Contact</Nav.Link>
           </Nav>
 
-          {/* Right: Button */}
-          <div className="text-end">
-            <Button variant="primary" className="fw-semibold">
+          {/* Right: Buttons with Icons */}
+          <div className="d-flex gap-3">
+            <Button variant="primary" className="fw-semibold d-flex align-items-center gap-2">
+              <Download size={18} />
               Download App
+            </Button>
+            <Button variant="primary" className="fw-semibold d-flex align-items-center gap-2">
+              <HelpCircle size={18} />
+              Support
             </Button>
           </div>
         </Navbar.Collapse>

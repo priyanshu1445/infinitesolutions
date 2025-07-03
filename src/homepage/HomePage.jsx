@@ -9,7 +9,7 @@ import cat2 from '../assets/cat2.jpg';
 import cat3 from '../assets/cat3.jpg';
 import { Smartphone, Download } from 'lucide-react';
 import androidLogo from '../assets/android.png'
-
+import { HelpCircle } from 'lucide-react';
 import {  Accordion } from 'react-bootstrap';
 import hpLogo from '../assets/hp.png';
 import dellLogo from '../assets/dell.png';
@@ -42,6 +42,7 @@ import {
   ShieldCheck,
   CheckCircle
 } from 'lucide-react';
+import Footer from './Footer';
 
 
 
@@ -241,16 +242,6 @@ const cards = [
   },
 ];
 
-const aboutServices = [
-  'Microsoft Windows PC Computer Repair',
-  'Apple iMac and Macbook Computer Repair',
-  'Data Recovery',
-  'Viruses, Spyware, Adware and Ransomware Removal',
-  'Cracked and Broken Laptop Screen Replacements',
-  'Charging Issues, Charging Port Repairs and Replacements',
-  'Computer Tune Ups, Hardware Repair, Installations',
-  'Printer Setups / Troubleshooting'
-];
 
 const HomePage = () => {
   return (
@@ -355,27 +346,37 @@ const HomePage = () => {
       </Container>
     </section>
 
-      <Container className='div-box'>
-        <Row className="g-4">
-          {cards.map((card, index) => (
-            <Col key={index} xs={12} sm={6} lg={4} data-aos={card.animation}>
-              <div className="hover-card position-relative overflow-hidden rounded-4 shadow-sm">
-                <img
-                  src={card.image}
-                  alt={card.title}
-                  className="w-100 object-fit-cover"
-                  style={{ height: '350px', transition: '0.5s ease' }}
-                />
-                <div className="hover-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center p-4">
-                  <h3 className="text-white  mb-2">{card.title} Repair</h3>
-                  <p className="text-light small mb-3">{card.content}</p>
-                  <Button variant="light">More Info</Button>
-                </div>
-              </div>
-            </Col>
-          ))}
-        </Row>
-      </Container>
+     <Container className="div-box">
+  <Row className="g-4">
+    {cards.map((card, index) => (
+      <Col key={index} xs={12} sm={6} lg={4} data-aos={card.animation}>
+        <div className="hover-card-wrapper position-relative overflow-hidden rounded-4 shadow-sm">
+          {/* Background Image */}
+          <img
+            src={card.image}
+            alt={card.title}
+            className="w-100 object-fit-cover"
+            style={{ height: '350px', transition: '0.5s ease' }}
+          />
+
+          {/* Title Overlay (Always Visible) */}
+          <div className="title-overlay position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center">
+            <h3 className="text-white fw-bold fs-4 bg-dark bg-opacity-50 px-3 py-2 rounded">
+              {card.title} Repair
+            </h3>
+          </div>
+
+          {/* Hover Overlay */}
+          <div className="hover-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center p-4">
+            <p className="text-light small mb-3">{card.content}</p>
+            <Button variant="light">More Info</Button>
+          </div>
+        </div>
+      </Col>
+    ))}
+  </Row>
+</Container>
+
 
       <section className=" text-center div-box bg-light">
         <Container>
@@ -622,26 +623,55 @@ const HomePage = () => {
     {/*  faqs section */}
 
 
-
-     <section className="div-box bg-light">
-      <Container>
-        <div className="text-center mb-5">
+<section className="faq-section div-box bg-light py-5">
+  <Container>
+    <Row className="align-items-center g-5 flex-column-reverse flex-md-row">
+      {/* Left Column – FAQ Heading + Accordion */}
+      <Col md={6} data-aos="fade-right">
+        <div className="mb-4 text-center text-md-start">
           <h2 className="fw-bold display-6">
             Frequently Asked <span className="text-gradient">Questions</span>
           </h2>
-          <p className="text-muted fst-italic">Answers to common concerns from our customers</p>
+          <p className="text-muted fst-italic mb-4">
+            Answers to common concerns from our customers
+          </p>
         </div>
 
         <Accordion defaultActiveKey="0" flush>
           {faqData.map((item, index) => (
-            <Accordion.Item eventKey={index.toString()} key={index} className="mb-3 shadow-sm border-0">
+            <Accordion.Item
+              eventKey={index.toString()}
+              key={index}
+              className="mb-3 border-0 shadow-sm rounded-3"
+            >
               <Accordion.Header>{item.question}</Accordion.Header>
-              <Accordion.Body className="text-muted">{item.answer}</Accordion.Body>
+              <Accordion.Body className="text-muted">
+                {item.answer}
+              </Accordion.Body>
             </Accordion.Item>
           ))}
         </Accordion>
-      </Container>
-    </section>
+      </Col>
+
+      {/* Right Column – Embedded Video */}
+      <Col md={6} data-aos="fade-left" className="text-center">
+        <div className="ratio ratio-16x9 rounded-4 shadow-sm">
+         <iframe width="560" height="315" src="https://www.youtube.com/embed/XrGV7d0LfKw?si=kKKnnMxl12DNtSW_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </Col>
+    </Row>
+  </Container>
+</section>
+
+
+
+
+{/*  footer section */}
+
+
+<div>
+  <Footer />
+</div>
 
     </div>
   );
