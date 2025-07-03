@@ -251,7 +251,7 @@ const HomePage = () => {
         <Row className="align-items-center g-5">
           {/* Hero Text */}
           <Col lg={7} data-aos="fade-right">
-            <h1 className="display-4 fw-bold mb-3">
+            <h1 className="display-4 text-white fw-bold mb-3">
               Fast & Reliable <span className="text-white">Tech Repairs</span>
             </h1>
             <p className=" text-white fs-5 mb-4">
